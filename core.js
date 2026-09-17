@@ -1248,7 +1248,7 @@ export function establishPrimitive(options) {
     if (typeof BigInt !== "function" || typeof MessageChannel !== "function"
         || typeof Symbol !== "function" || typeof history === "undefined"
         || typeof history.replaceState !== "function")
-        return Promise.reject(new Error("core: ‏غير مدعوم‏ browser"));
+        return Promise.reject(new Error("core: unsupported browser"));
 
     onEvent = typeof opts.onEvent === "function" ? opts.onEvent : null;
     criticalBarrier = typeof opts.beforeCriticalLoad === "function"
